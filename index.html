@@ -4,4 +4,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <link rel="stylesheet" href="./assets/style.css" />
+  <script src="./assets/script.js"></script>
+  <title>TIMED QUIZ</title>
+</head>
+<body>
+  <!--the first page to start the game-->
+  <div class="start-screen">
+    <button id="start-button">Start</button>
+  </div>
+  <!--these include the content on the header and what will be included on the header-->
+<div id="display-content">
+  <div class ="header">
+    <div class="number-count">
+      <em class="number-of-question">1 out of 5 questions</em>
+      </div>
+      <!--This shows how much time you have for the quiz game -->
+      <div class="timer">
+        <em class="time-left">10s</em>
+      </div>
+  </div>
+  <div id="container">
+<!--questions and options will display here -->
+  </div>
+  <button id="next-button">Next</button>
+  <div class="score-container hide">
+    <div id="user-score">Final score</div>
+    <button id="restart">Restart</button>
+  </div>
+
+
+</body>
+
+
+

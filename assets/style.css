@@ -1,0 +1,136 @@
+/*this sets the page to have neutral padding and margin except the ones assigned to it's class and the box size to boarder-box*/
+*{ 
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family:'Courier New', Courier, monospace;
+}
+/* this is the style for the body tag and the background color as well as the font color*/
+body{
+    background-color:lightblue;
+    color:rgb(255, 0, 157);
+}
+
+.start-screen, .score-container{
+    top:0;
+    width:70%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:center;
+    position:absolute;
+}
+
+button{
+    outline:none;
+    cursor:pointer;
+    border:none;
+
+}
+
+#restart, #start-button{
+    font-size:1.30em;
+    border-radius:0.3em;
+    box-shadow:0 0 8px 1px black;
+    padding:0.4em 1.8em;
+    background-color:black;
+    color:aqua;
+}
+
+#restart{
+    margin-top:0.8em;
+}
+
+#display-content{
+    padding:2.1em 1.8em;
+    width:70%;
+    max-width:32.8em;
+    margin:0 auto;
+    position:absolute;
+    top:10%;
+    left:30%;
+    transform:translate(-50%, -50%);
+    border-radius:0.6em;
+    
+}
+
+.header{
+    display:flex;
+    margin-bottom:1.8em;
+    justify-content:space-between;
+    padding-bottom:0.7em;
+    align-items:center;
+    border-bottom:0.1em solid rgb(208, 103, 148);
+
+}
+.timer{
+    background-color:black;
+    color:aqua;
+    border-radius:1.7em;
+    justify-content:right;
+    padding:0.5em 1.7em;
+    align-items:center;
+    width:5.5em;
+    display:flex;
+}
+
+.options-div{
+    font-size:0.8em;
+    width:100%;
+    padding:1em;
+    margin:0.3em 0;
+    text-align:left;
+    outline:none;
+    background-color:none;
+    border:1px lightblue;
+    border-radius:0.4em;
+
+}
+
+.option-div:disabled{
+    color:aqua;
+    cursor:not-allowed;
+    background-color:black;
+}
+
+.question{
+    margin-bottom:1.26em;
+    font-weight:500;
+
+}
+
+#next-button{
+    font-size:1em;
+    background-color: black;
+    margin-top:1.5em;
+    color:aqua;
+    padding:0.7em 1.8em;
+    border-radius:0.4em;
+    float:right;
+    box-shadow:0 0 8px 1px black;
+}
+
+.hide{
+    display: none;
+}
+
+
+.correct{
+    background-color:white;
+    color:rgb(71, 211, 83);
+    border-color:rgb(71, 211, 83);
+
+}
+.incorrect{
+    background-color:white;
+    color:brown;
+    border-color:brown;
+
+}
+
+#user-score{
+font-size:1.6em;
+color:black;
+
+}
