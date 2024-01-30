@@ -13,7 +13,6 @@ var scoreCount = 0;
 var count = 10;
 var countdown;
 
-
 //5 questions with options and correct answer 
 var quizArr = [
     {
@@ -34,10 +33,10 @@ options:[
     id: "1",
     question:"How to we assign a style in CSS to an ID attribute?",
     options:[
-         "We use (.) and the ID attribute",
-         "We use (*) and the ID attribute ",
-         "We use (#) and the ID attribute",
-         "None of the above",
+    "We use (.) and the ID attribute",
+    "We use (*) and the ID attribute ",
+    "We use (#) and the ID attribute",
+    "None of the above",
 ],
 correct:"We use (#) and the ID attribute"
 },
@@ -112,7 +111,7 @@ nextBtn.addEventListener("click", (displayNext = () =>{
        countOfQuestion.innerHTML = questionCount + 1 + "of" + quizArr.length + "Question";
 
        quizDisplay(questionCount);
-       count = 100;
+       count = 10;
        clearInterval(countdown);
        timerDisplay();
 
