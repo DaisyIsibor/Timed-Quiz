@@ -1,136 +1,80 @@
 /*this sets the page to have neutral padding and margin except the ones assigned to it's class and the box size to boarder-box*/
+
 *{ 
     margin:0px;
     padding:0px;
     box-sizing:border-box;
-    font-family:'Courier New', Courier, monospace;
-}
-/* this is the style for the body tag and the background color as well as the font color*/
-body{
-    background-color:lightblue;
-    color:rgb(255, 0, 157);
-}
-
-.start-screen, .score-container{
-    top:0;
-    width:70%;
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    align-items:center;
-    position:absolute;
-}
-
-button{
-    outline:none;
-    cursor:pointer;
-    border:none;
-
-}
-
-#restart, #start-button{
-    font-size:1.30em;
-    border-radius:0.3em;
-    box-shadow:0 0 8px 1px black;
-    padding:0.4em 1.8em;
-    background-color:black;
-    color:aqua;
-}
-
-#restart{
-    margin-top:0.8em;
-}
-
-#display-content{
-    padding:2.1em 1.8em;
-    width:70%;
-    max-width:32.8em;
-    margin:0 auto;
-    position:absolute;
-    top:10%;
-    left:30%;
-    transform:translate(-50%, -50%);
-    border-radius:0.6em;
     
 }
 
-.header{
-    display:flex;
-    margin-bottom:1.8em;
-    justify-content:space-between;
-    padding-bottom:0.7em;
+/* this is the style for the body tag and the background color as well as the font color*/
+body{
+    background-color:lightblue;
+    color:black;
+    text-align:center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:30px;
+    line-height:40px;
+    justify-content:center;
+    flex-wrap:wrap;
     align-items:center;
-    border-bottom:0.1em solid rgb(208, 103, 148);
-
+    min-height:100vh;
 }
-.timer{
+
+
+#startButton{
+    color:aqua;
     background-color:black;
-    color:aqua;
-    border-radius:1.7em;
-    justify-content:right;
-    padding:0.5em 1.7em;
-    align-items:center;
-    width:5.5em;
-    display:flex;
+    cursor:pointer;
+    padding:10px 30px;
+    border-radius:5px;
+    margin-top:40px;
+    Font-size:25px;
 }
 
-.options-div{
-    font-size:0.8em;
-    width:100%;
-    padding:1em;
-    margin:0.3em 0;
-    text-align:left;
-    outline:none;
-    background-color:none;
-    border:1px lightblue;
-    border-radius:0.4em;
-
+#startButton:hover{
+    background-color:grey;
 }
 
-.option-div:disabled{
+#submitButton{
     color:aqua;
-    cursor:not-allowed;
     background-color:black;
+    cursor:pointer;
+    padding:10px 30px;
+    border-radius:5px;
+    Font-size:25px;
+    position:fixed;
+    right:30%;
+    transform:translateX(50%);
+    bottom:30px;
 }
 
-.question{
-    margin-bottom:1.26em;
-    font-weight:500;
-
+#submitButton:hover{
+    background-color:grey;
 }
 
-#next-button{
-    font-size:1em;
-    background-color: black;
-    margin-top:1.5em;
-    color:aqua;
-    padding:0.7em 1.8em;
-    border-radius:0.4em;
-    float:right;
-    box-shadow:0 0 8px 1px black;
+#quiz-section{
+    text-align:center;
 }
 
-.hide{
-    display: none;
-}
-
-
-.correct{
-    background-color:white;
-    color:rgb(71, 211, 83);
-    border-color:rgb(71, 211, 83);
-
-}
-.incorrect{
-    background-color:white;
-    color:brown;
-    border-color:brown;
+#question{
+    margin-bottom:25px;
+    font-size:20px;
 
 }
 
-#user-score{
-font-size:1.6em;
-color:black;
+#selction{
+    margin-bottom:18px;
+}
 
+#timer{
+    position:fixed;
+    top:0;
+    right:10px;
+}
+
+/*#score{
+    position:absolute;
+    top:0;
+    left:10px;
 }
