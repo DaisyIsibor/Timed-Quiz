@@ -4,37 +4,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/style.css" />
   <title>TIMED QUIZ</title>
+  <link rel="stylesheet" href="./assets/style.css" />
 </head>
-<body>
-  <!--the first page to start the game-->
-  <div class="start-screen">
-    <button id="start-button">Start</button>
-  </div>
-  <!--these include the content on the header and what will be included on the header-->
-<div id="display-content">
-  <div class ="header">
-    <div class="number-count">
-      <em class="number-of-question">1 out of 5 questions</em>
-      </div>
-      <!--This shows how much time you have for the quiz game -->
-      <div class="timer">
-        <em class="time-left">10s</em>
-      </div>
-  </div>
-  <div id="container">
-<!--questions and options will display here -->
-  </div>
-  <button id="next-button">Next</button>
-  <div class="score-container hide">
-    <div id="user-score">Final score</div>
-    <button id="restart">Restart</button>
-  
-  </div>
+<header>
 
-  <script src="./assets/script.js"></script>
+<p id="timer">Time: 0s</p>
+<div>
+  <a href="./assets/score.html">
+    <button class="scores"id="view-highscore">
+      View Score
+    </button>
+  </a>
+  </div>
+</header>
+
+<body>
+
+  <main class ="quiz">
+    <div id ="start-quiz">
+
+
+  <section class="start-Page" id="start-screen">
+
+    <h1>CODE QUIZ CHALLENGE</h1>
+    <p>This is a timed quiz question</p>
+    <p>Read the questions carefully and select the correct answer</p>
+    <p>If you answer any question incorrectly, time will be subtracted from the clock.</p>
+
+    <p>Click start to begin</p>
+
+    <button id="startButton">START</button>
+
+  </div>
+</main>
+
+     <div class= "hide" id="quiz-section">
+      <div id="question"></div>
+      <div class ="options" id="options"></div>
+</div>
+<!--
+    <div id="score-container" class="hide">
+     -->
+
+    <div id="feedback"
+         class="feedback hide">
+    </div>
+     
+
+      <!--<button id="submitButton">Submit</button>-->
+      
+    </div>
+  </section>
+    <script src="./assets/script.js"></script>
+  
 </body>
+
+</html>
 
 
 

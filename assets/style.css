@@ -6,6 +6,9 @@
     box-sizing:border-box;
     
 }
+.hide_{
+    display:none;
+}
 
 /* this is the style for the body tag and the background color as well as the font color*/
 body{
@@ -36,6 +39,10 @@ body{
     background-color:grey;
 }
 
+.start-Page{
+    text-align: center;
+}
+
 #submitButton{
     color:aqua;
     background-color:black;
@@ -53,8 +60,43 @@ body{
     background-color:grey;
 }
 
+.reset-btn{
+    color:aqua;
+    background-color:black;
+    cursor:pointer;
+    padding:8px 15px;
+    border-radius:8px;
+    Font-size:17px;
+  display:inline-block;
+  margin:12px;
+  margin-top:30px;
+  margin-left:3px;
+    
+}
+#clear{
+    color:aqua;
+    background-color:black;
+    cursor:pointer;
+    padding:8px 15px;
+    border-radius:8px;
+    Font-size:17px;
+  display:inline-block;
+  margin-top:30px;
+}
+
+.reset-Btn:hover{
+    background-color:grey;
+}
+
 #quiz-section{
-    text-align:center;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    /*padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    */
+    text-align: center
 }
 
 #question{
@@ -63,8 +105,20 @@ body{
 
 }
 
-#selction{
+#options{
     margin-bottom:18px;
+    display: block;
+    margin: 10px auto;
+  /*  padding: 10px 20px;*/
+    background-color: #f0f0f0;
+    /*border: 1px solid #ccc; */
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+
+#options:hover {
+    background-color: #e0e0e0;
 }
 
 #timer{
@@ -72,9 +126,23 @@ body{
     top:0;
     right:10px;
 }
+.scores {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color:aqua;
+    background-color:black;
+   cursor:pointer;
+    padding:8px 15px;
+    border-radius:8px;
+    Font-size:17px;
+  display:inline-block;
+  margin-top:20px;
 
-/*#score{
-    position:absolute;
-    top:0;
-    left:10px;
+}
+
+ol {
+    padding-left: 15px;
+    max-height: 600px;
+    overflow: auto;
 }
