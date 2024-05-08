@@ -1,66 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TIMED QUIZ</title>
-  <link rel="stylesheet" href="./assets/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMED QUIZ</title>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
-<header>
-
-<p id="timer">Time: 0s</p>
-<div>
-  <a href="./assets/score.html">
-    <button class="scores"id="view-highscore">
-      View Score
-    </button>
-  </a>
-  </div>
-</header>
-
 <body>
+    <header>
+        <p>Time: <span id="timer">50</span>s</p>
+        <div>
+            <a href="./assets/score.html">
+                <button class="scores" id="view-highscore">View Score</button>
+            </a>
+        </div>
+    </header>
 
-  <main class ="quiz">
-    <div id ="start-quiz">
+    <main class="quiz">
+        <div id="start-quiz">
+            <section class="start-Page" id="start-screen">
+                <h1>CODE QUIZ CHALLENGE</h1>
+                <p>This is a timed quiz question</p>
+                <p>Read the questions carefully and select the correct answer</p>
+                <p>If you answer any question incorrectly, time will be subtracted from the clock.</p>
+                <p>Click start to begin</p>
+                <button id="start-Btn">START</button>
+            </section>
+        </div>
 
+        <section class="hide" id="quiz-section">
+            <div id="question"></div>
+            <div class="options" id="options"></div>
+        </section>
 
-  <section class="start-Page" id="start-screen">
+        <section class="results" id="results">
+            <label>Enter your Initials:</label>
+            <input type="text" id="initials">
+            <button id="submit">Submit</button>        
+        </section>
+        
+        <div id="feedback" class="feedback hide"></div>
+    </main>
 
-    <h1>CODE QUIZ CHALLENGE</h1>
-    <p>This is a timed quiz question</p>
-    <p>Read the questions carefully and select the correct answer</p>
-    <p>If you answer any question incorrectly, time will be subtracted from the clock.</p>
-
-    <p>Click start to begin</p>
-
-    <button id="startButton">START</button>
-
-  </div>
-</main>
-
-     <div class= "hide" id="quiz-section">
-      <div id="question"></div>
-      <div class ="options" id="options"></div>
-</div>
-<!--
-    <div id="score-container" class="hide">
-     -->
-
-    <div id="feedback"
-         class="feedback hide">
-    </div>
-     
-
-      <!--<button id="submitButton">Submit</button>-->
-      
-    </div>
-  </section>
     <script src="./assets/script.js"></script>
-  
 </body>
-
 </html>
-
 
 
