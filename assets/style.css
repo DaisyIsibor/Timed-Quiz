@@ -47,8 +47,7 @@ header p {
 .start-Page button:hover {
     background-color: grey;
 }
-
-.reset-btn {
+#resetButton {
     color: aqua;
     background-color: black;
     cursor: pointer;
@@ -71,11 +70,12 @@ ol {
     list-style: decimal;
 }
 
+
 .reset-btn:hover {
     background-color: grey;
 }
 
-#clear {
+#clearHighScores {
     color: aqua;
     background-color: black;
     cursor: pointer;
@@ -85,7 +85,7 @@ ol {
     display: inline-block;
     margin-top: 30px;
 }
-button#clear {
+button#clearHighScores {
     margin-top: 20px;
     padding: 8px 15px;
     border-radius: 5px;
