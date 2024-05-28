@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIMED QUIZ</title>
+    <title>Code Quiz - High Scores</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
     <header>
         <p>Time: <span id="timer">50</span>s</p>
         <div>
-            <a href="./assets/score.html">
-                <button class="scores" id="view-highscore">View Score</button>
-            </a>
+            <button class="scores" id="view-highscore">View Score</button>
         </div>
     </header>
 
@@ -22,7 +20,7 @@
                 <h1>CODE QUIZ CHALLENGE</h1>
                 <p>This is a timed quiz question</p>
                 <p>Read the questions carefully and select the correct answer</p>
-                <p>If you answer any question incorrectly, time will be subtracted from the clock.</p>
+                <p>Incorrect answers will deduct 5 seconds from the timer.</p>
                 <p>Click start to begin</p>
                 <button id="start-Btn">START</button>
             </section>
@@ -33,17 +31,25 @@
             <div class="options" id="options"></div>
         </section>
 
-        <section class="results" id="results">
-            <label>Enter your Initials:</label>
+        <section class="results hide" id="results">
+            <label for="initials">Enter your Initials:</label>
             <input type="text" id="initials">
-            <button id="submit">Save Score</button>        
+            <button id="submit">Save Score</button>
+            <button id="resetButton" class="reset-btn">Reset Quiz</button>
+            <button id="clearHighScores">Clear Highscores</button>
+            <!-- Added the following line for displaying the feedback message -->
+            <p id="feedback-message" class="feedback hide"></p>
+            <!-- Added the following line for displaying the final score -->
+            <p id="final-score"></p>
         </section>
         
-        <div id="feedback-message"class="feedback hide"></div>
+        <section id="highscores-section" class="hide">
+            <h2>High Scores</h2>
+            <ol id="highscores"></ol>
+        </section>
+        
     </main>
 
     <script src="./assets/script.js"></script>
 </body>
 </html>
-
-
