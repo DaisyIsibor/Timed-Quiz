@@ -3,11 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
     var quizSection = document.getElementById('quiz-section');
     var optionElement = document.getElementById('options');
     var timerElement = document.getElementById('timer');
-    var feedbackMessage = document.getElementById('feedback-message');
     var submitButton = document.getElementById('submit');
     var clearButton = document.getElementById('clearHighScores');
     var resetButton = document.getElementById('resetButton');
+    var highscoresList = document.getElementById('highscores');
 
+    
     var index = 0;
     var score = 0;
     var time = 50;
@@ -74,21 +75,19 @@ document.addEventListener('DOMContentLoaded', function() {
             optionElement.appendChild(button);
         });
     }
-
     function checkAnswer(userAns) {
         var isCorrect = userAns === true;
-
+    
         if (isCorrect) {
-            feedbackMessage.textContent = "Correct!";
+            showFeedback("Correct!");
             score++;
         } else {
             time -= 5; // Deduct 5 seconds for incorrect answer
-            feedbackMessage.textContent = "Incorrect!";
+            showFeedback("Incorrect!");
         }
-
-        feedbackMessage.classList.remove('hide');
+    
         setTimeout(function() {
-            feedbackMessage.classList.add('hide');
+            hideFeedback();
             index++;
             if (index < quizChall.length) {
                 displayQuestion(); // Move to the next question
@@ -97,17 +96,31 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 1000);
     }
-
+    
     function endQuiz() {
         clearInterval(timerInterval);
         quizSection.style.display = "none";
         var finalScore = document.getElementById("final-score");
         finalScore.textContent = "Your Score: " + score; // Display the final score
         document.getElementById("results").classList.remove('hide');
-        document.getElementById("highscores-section").classList.remove('hide'); // Display the section for entering initials
+        document.getElementById("initials").classList.remove('hide'); // Display the input for initials
+        submitButton.classList.remove('hide'); // Display the submit button
         displayHighscores(); // Display the high scores
     }
+    
 
+    function showFeedback(message) {
+        var feedbackContainer = document.getElementById('feedback-container');
+        var feedbackMessage = document.createElement('p');
+        feedbackMessage.textContent = message;
+        feedbackContainer.appendChild(feedbackMessage);
+    }
+
+    function hideFeedback() {
+        var feedbackContainer = document.getElementById('feedback-container');
+        feedbackContainer.innerHTML = ''; // Clear any existing feedback messages
+    }
+    
     function saveScore(initials, score) {
         var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
         highscores.push({ initials: initials, score: score });
@@ -115,18 +128,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function displayHighscores() {
-        var highscoresList = document.getElementById('highscores');
-        if (highscoresList) {
-            highscoresList.innerHTML = "";
-            var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
-            highscores.forEach(function(entry) {
-                var li = document.createElement("li");
-                li.textContent = entry.initials + ": " + entry.score;
-                highscoresList.appendChild(li);
-            });
-        } else {
-            console.error("Element with id 'highscores' not found.");
-        }
+        highscoresList.innerHTML = "";
+        var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
+        highscores.forEach(function(entry) {
+            var li = document.createElement("li");
+            li.textContent = entry.initials + ": " + entry.score;
+            highscoresList.appendChild(li);
+        });
     }
 
     submitButton.addEventListener('click', function(event) {
@@ -148,7 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     startBtn.addEventListener('click', startQuiz);
 
-    // Event listener for reset button
     resetButton.addEventListener('click', function() {
         clearInterval(timerInterval);
         score = 0;
