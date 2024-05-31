@@ -151,9 +151,9 @@ ol {
     overflow: auto;
 }
 
-.results{
+/* .results{
     display: none;
-}
+} */
 
 .results button {
     background-color: #28a745;
@@ -174,39 +174,7 @@ ol {
     font-size: 20px;
     margin-top: 5px;
 }
-/* .end-quiz {
-    display: none;
-    max-width: 600px;
-    margin: 50px auto;
-}
 
-.end-quiz h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.end-quiz input[type="text"] {
-    padding: 8px;
-    font-size: 16px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-
-.end-quiz button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: black;
-    color: aqua;
-    cursor: pointer;
-}
-
-.end-quiz button:hover {
-    background-color: grey;
-} */
 
 @media screen and (max-width: 600px) {
     .quiz-section {
