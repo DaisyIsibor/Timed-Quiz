@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function startQuiz() {
         document.getElementById('start-screen').style.display = "none";
         quizSection.style.display = 'block';
-       
         timerInterval = setInterval(function() {
             if (time <= 0) {
                 clearInterval(timerInterval);

@@ -8,7 +8,7 @@
 
 body {
     background-color:darkolivegreen ;
-    color: #333;
+    color: white;
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
@@ -38,7 +38,6 @@ header p {
 
 
 .start-Page button {
-    background-color:linear-gradient(to right, #862d12, #bd978e);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -48,9 +47,7 @@ header p {
     transition: background-color 0.3s ease;
 }
 
-.start-Page button:hover {
-    background-color:linear-gradient(to right, #ff8a65, #ff5733);
-}
+
 #resetButton {
     color: aqua;
     background-color: black;
@@ -125,6 +122,7 @@ button#clearHighScores {
     padding: 10px 20px;
     font-size: 16px;
     border: 1px solid #ccc;
+    color:white;
     border-radius: 5px;
     background-color: darkolivegreen;
     cursor: pointer;
@@ -151,11 +149,6 @@ ol {
     overflow: auto;
 }
 
-
-.feedback-container.hide {
-    display: none;
-}
-
 .results button {
     background-color: black;
     color: aqua;
@@ -171,11 +164,6 @@ ol {
     background-color: darkolivegreen;
 }
 
-.feedback {
-    font-size: 20px;
-    margin-top: 5px;
-}
-
 /* Styling for quiz questions container */
 #quiz-section {
     background: rgb(189, 220, 135); 
@@ -187,6 +175,7 @@ ol {
 /* Styling for quiz questions */
 #question {
     background:darkolivegreen; 
+    color:white;
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 20px;
