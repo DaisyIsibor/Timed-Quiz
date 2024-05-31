@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function startQuiz() {
         document.getElementById('start-screen').style.display = "none";
         quizSection.style.display = 'block';
+       
         timerInterval = setInterval(function() {
             if (time <= 0) {
                 clearInterval(timerInterval);
@@ -96,17 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // function endQuiz() {
-    //     clearInterval(timerInterval);
-    //     quizSection.style.display = "none";
-    //     var finalScore = document.getElementById("final-score");
-    //     finalScore.textContent = "Your Score: " + score; // Display the final score
-    //     document.getElementById("results").classList.remove('hide');
-    //     document.getElementById("initials").classList.remove('hide'); // Display the input for initials
-    //     submitButton.classList.remove('hide'); // Display the submit button
-    //     displayHighscores(); // Display the high scores
-    // }
-    
     function endQuiz() {
         clearInterval(timerInterval);
         quizSection.style.display = "none";
@@ -153,18 +143,6 @@ document.addEventListener('DOMContentLoaded', function() {
         highscoresSection.classList.toggle('hide');
         displayHighscores(); // Ensure high scores are displayed when the button is clicked
     });
-    
-    // submitButton.addEventListener('click', function(event) {
-    //     event.preventDefault();
-    //     var initialsInput = document.getElementById('initials');
-    //     var initials = initialsInput.value.trim();
-    //     if (initials !== "") {
-    //         saveScore(initials, score);
-    //         endQuiz();
-    //     } else {
-    //         alert("Please enter your initials.");
-    //     }
-    // });
 
     submitButton.addEventListener('click', function(event) {
         event.preventDefault();
@@ -186,14 +164,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     startBtn.addEventListener('click', startQuiz);
 
-    // resetButton.addEventListener('click', function() {
-    //     clearInterval(timerInterval);
-    //     score = 0;
-    //     time = 50;
-    //     index = 0;
-    //     document.getElementById('start-screen').style.display = 'block';
-    //     document.getElementById('highscores-section').classList.add('hide');
-    // });
 
     resetButton.addEventListener('click', function() {
         clearInterval(timerInterval);

@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color:darkolivegreen ;
     color: #333;
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -15,8 +15,8 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color:#dede92;
+    color: #333;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -38,7 +38,7 @@ header p {
 
 
 .start-Page button {
-    background-color: #007bff;
+    background-color:linear-gradient(to right, #862d12, #bd978e);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -49,7 +49,7 @@ header p {
 }
 
 .start-Page button:hover {
-    background-color: #0056b3;
+    background-color:linear-gradient(to right, #ff8a65, #ff5733);
 }
 #resetButton {
     color: aqua;
@@ -126,18 +126,18 @@ button#clearHighScores {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f0f0f0;
+    background-color: darkolivegreen;
     cursor: pointer;
     transition: background-color 0.3s ease; 
 }
 
 .options button:hover {
-    background-color: #7c9188;
+    background-color: rgb(189, 220, 135);
 }
 
 .scores {
-    color: aqua;
-    background-color: black;
+    color: black;
+    background-color: aqua;
     cursor: pointer;
     padding: 8px 15px;
     border-radius: 8px;
@@ -151,17 +151,14 @@ ol {
     overflow: auto;
 }
 
-/* .results{
-    display: none;
-} */
 
 .feedback-container.hide {
     display: none;
 }
 
 .results button {
-    background-color: #28a745;
-    color: #fff;
+    background-color: black;
+    color: aqua;
     border: none;
     border-radius: 4px;
     padding: 10px 20px;
@@ -171,12 +168,44 @@ ol {
 }
 
 .results button:hover {
-    background-color: #218838;
+    background-color: darkolivegreen;
 }
 
 .feedback {
     font-size: 20px;
     margin-top: 5px;
+}
+
+/* Styling for quiz questions container */
+#quiz-section {
+    background: rgb(189, 220, 135); 
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Styling for quiz questions */
+#question {
+    background:darkolivegreen; 
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Styling for start button */
+#start-Btn, #view-highscore {
+    background-color:black;
+    color: aqua;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start-Btn:hover, #view-highscore:hover {
+    background-color:darkolivegreen ;
 }
 
 
