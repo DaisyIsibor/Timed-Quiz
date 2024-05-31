@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showFeedback("Correct!");
             score++;
         } else {
-            time -= 5; // Deduct 5 seconds for incorrect answer
+            time -= 10; // Deduct 10 seconds for incorrect answer
             showFeedback("Incorrect!");
         }
     
