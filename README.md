@@ -2,7 +2,7 @@
 
  ## Deployed Link
 
-
+https://daisyisibor.github.io/Timed-Quiz/
  
 # Table of Contents
 - [Description](#description)
