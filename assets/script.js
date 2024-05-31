@@ -96,6 +96,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    // function endQuiz() {
+    //     clearInterval(timerInterval);
+    //     quizSection.style.display = "none";
+    //     var finalScore = document.getElementById("final-score");
+    //     finalScore.textContent = "Your Score: " + score; // Display the final score
+    //     document.getElementById("results").classList.remove('hide');
+    //     document.getElementById("initials").classList.remove('hide'); // Display the input for initials
+    //     submitButton.classList.remove('hide'); // Display the submit button
+    //     displayHighscores(); // Display the high scores
+    // }
+    
     function endQuiz() {
         clearInterval(timerInterval);
         quizSection.style.display = "none";
@@ -106,8 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
         submitButton.classList.remove('hide'); // Display the submit button
         displayHighscores(); // Display the high scores
     }
-    
-    
 
     function showFeedback(message) {
         var feedbackContainer = document.getElementById('feedback-container');
@@ -137,6 +146,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
+    var viewHighscoresButton = document.getElementById('view-highscore');
+    viewHighscoresButton.addEventListener('click', function() {
+        var highscoresSection = document.getElementById('highscores-section');
+        highscoresSection.classList.toggle('hide');
+        displayHighscores(); // Ensure high scores are displayed when the button is clicked
+    });
+    
+    // submitButton.addEventListener('click', function(event) {
+    //     event.preventDefault();
+    //     var initialsInput = document.getElementById('initials');
+    //     var initials = initialsInput.value.trim();
+    //     if (initials !== "") {
+    //         saveScore(initials, score);
+    //         endQuiz();
+    //     } else {
+    //         alert("Please enter your initials.");
+    //     }
+    // });
+
     submitButton.addEventListener('click', function(event) {
         event.preventDefault();
         var initialsInput = document.getElementById('initials');
@@ -149,12 +178,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+
     clearButton.addEventListener('click', function() {
         localStorage.removeItem("highscores");
         displayHighscores(); // Update high scores list
     });
 
     startBtn.addEventListener('click', startQuiz);
+
+    // resetButton.addEventListener('click', function() {
+    //     clearInterval(timerInterval);
+    //     score = 0;
+    //     time = 50;
+    //     index = 0;
+    //     document.getElementById('start-screen').style.display = 'block';
+    //     document.getElementById('highscores-section').classList.add('hide');
+    // });
 
     resetButton.addEventListener('click', function() {
         clearInterval(timerInterval);
@@ -163,5 +202,8 @@ document.addEventListener('DOMContentLoaded', function() {
         index = 0;
         document.getElementById('start-screen').style.display = 'block';
         document.getElementById('highscores-section').classList.add('hide');
+        document.getElementById('results').classList.add('hide'); // Hide results section
+        document.getElementById('initials').classList.add('hide'); // Hide initials input
+        document.getElementById('feedback-container').innerHTML = ''; // Clear feedback messages
     });
 });

@@ -155,6 +155,10 @@ ol {
     display: none;
 } */
 
+.feedback-container.hide {
+    display: none;
+}
+
 .results button {
     background-color: #28a745;
     color: #fff;
