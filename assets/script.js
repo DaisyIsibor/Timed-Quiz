@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             optionElement.appendChild(button);
         });
     }
+
     function checkAnswer(userAns) {
         var isCorrect = userAns === true;
     
@@ -86,15 +87,13 @@ document.addEventListener('DOMContentLoaded', function() {
             showFeedback("Incorrect!");
         }
     
-        setTimeout(function() {
-            hideFeedback();
-            index++;
-            if (index < quizChall.length) {
-                displayQuestion(); // Move to the next question
-            } else {
-                endQuiz(); // Call endQuiz() function if it's the last question
-            }
-        }, 1000);
+        hideFeedback();
+        index++;
+        if (index < quizChall.length) {
+            displayQuestion(); // Move to the next question
+        } else {
+            endQuiz(); // Call endQuiz() function if it's the last question
+        }
     }
     
     function endQuiz() {
@@ -107,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
         submitButton.classList.remove('hide'); // Display the submit button
         displayHighscores(); // Display the high scores
     }
+    
     
 
     function showFeedback(message) {
