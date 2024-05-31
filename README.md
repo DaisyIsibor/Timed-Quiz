@@ -44,6 +44,9 @@ THEN I can save my initials and my score
 
 ## Mock-Up
 The project includes a mock-up demonstrating the application functionality.
+![alt text](<images/start page.png>)
+![alt text](images/question-page.png)
+![alt text](images/quiz-end.png)
 
 
 ## Usage
